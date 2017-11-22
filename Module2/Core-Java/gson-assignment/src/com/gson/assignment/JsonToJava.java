@@ -36,37 +36,43 @@ public class JsonToJava {
 
 		FileWriter file = new FileWriter("output.txt");
 		int i = 0;
+		System.out.println("============= Company with keyPeople > 0 =============");
 		for (Company company : companyList) {
 
 			file.write(company.getCompany() + ":" + company.getDescription());
 			if (i++ != companyList.size() - 1) {
 				file.write("\n");
 			}
-
 			if (company.getKeyPeople().size() > 0) {
 				System.out.println("company : " + company.getCompany());
-				if (!company.getFax().equals("-")) {
-					String fax = company.getFax().replaceAll("-", "");
-					Long faxNo = Long.valueOf(fax);
-					System.out.println("fax : " + faxNo);
-
-				}
-
-				if (company.getWeburl() != null) {
-					Pattern p = Pattern.compile("www.(.*)\\.(.*)");
-					Matcher m = p.matcher(company.getWeburl());
-					if (m.matches()) {
-						System.out.println("weburl : " + m.group(1) + "." + m.group(2));
-					}
-
-				}
-
-				System.out.println();
-
 			}
-
 		}
 		file.close();
 
+		System.out.println("============= Fax =============");
+		for (Company company : companyList) {
+
+			if (!company.getFax().equals("-")) {
+				String fax = company.getFax().replaceAll("-", "");
+				Long faxNo = Long.parseLong(fax);
+				System.out.println("fax : " + faxNo);
+
+			}
+		}
+
+		System.out.println("============= webUrl =============");
+		for (Company company : companyList) {
+
+			if (company.getWeburl() != null) {
+				Pattern p = Pattern.compile("www.(.*)\\.(.*)");
+				Matcher m = p.matcher(company.getWeburl());
+				if (m.matches()) {
+					System.out.println("weburl : " + m.group(1) + "." + m.group(2));
+				}
+
+			}
+		}
+
 	}
+
 }
