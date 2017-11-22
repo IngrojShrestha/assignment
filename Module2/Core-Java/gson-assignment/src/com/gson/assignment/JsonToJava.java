@@ -59,20 +59,41 @@ public class JsonToJava {
 
 			}
 		}
-
+	
 		System.out.println("============= webUrl =============");
 		for (Company company : companyList) {
 
 			if (company.getWeburl() != null) {
-				Pattern p = Pattern.compile("www.(.*)\\.(.*)");
+				Pattern p = Pattern.compile("(www[0-9]?\\.)?(.*)\\.(.*)");
 				Matcher m = p.matcher(company.getWeburl());
 				if (m.matches()) {
-					System.out.println("weburl : " + m.group(1) + "." + m.group(2));
+					String url = m.group(2) + "." + m.group(3);
+
+					// Remove everything after /
+					Pattern p2 = Pattern.compile("/.*");
+					url = p2.matcher(url).replaceAll("");
+
+					// Remove sub domain
+					if (count(url) > 1) {
+						String regex = "^(\\w+\\.)";
+						url = url.replaceAll(regex, "");
+					}
+					System.out.println("weburl : " + url);
 				}
 
 			}
 		}
-
+		
+	}
+	
+	public static int count(String data) {
+		int charCount = 0;
+		for (int i = 0; i < data.length(); i++) {
+			if (data.charAt(i) == '.') {
+				charCount++;
+			}
+		}
+		return charCount;
 	}
 
 } 
