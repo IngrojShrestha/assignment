@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 import com.google.gson.Gson;
 
-public class JsonToJavaFinal {
+public class JsonToJava {
 	public static void main(String[] args) throws IOException {
 
 		String filename = "1-0-994.txt";
