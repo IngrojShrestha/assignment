@@ -12,13 +12,31 @@ import java.util.regex.Pattern;
 
 import com.google.gson.Gson;
 
-public class JsonToJava {
+public class JsonToJavaFinal {
 	public static void main(String[] args) throws IOException {
+
+		String filename = "1-0-994.txt";
+
+		String outputFileName = "output.txt";
+
+		List<Company> companyList = getData(filename);
+
+		storeDescription(companyList, outputFileName);
+
+		displayCompany(companyList);
+
+		displayFaxInformation(companyList);
+
+		displayWebUrl(companyList);
+
+	}
+
+	public static List<Company> getData(String filename) {
 		List<Company> companyList = new ArrayList<>();
 
 		Gson gson = new Gson();
 
-		File f = new File("1-0-994.txt");
+		File f = new File(filename);
 
 		Scanner in;
 		try {
@@ -34,21 +52,40 @@ public class JsonToJava {
 			e.printStackTrace();
 		}
 
-		FileWriter file = new FileWriter("output.txt");
+		return companyList;
+	}
+
+	public static void storeDescription(List<Company> companyList, String outputFileName) {
 		int i = 0;
+		FileWriter file;
+		try {
+			file = new FileWriter(outputFileName);
+			for (Company company : companyList) {
+
+				file.write(company.getCompany() + ":" + company.getDescription());
+				if (i++ != companyList.size() - 1) {
+					file.write("\n");
+				}
+			}
+			file.close();
+			System.out.println("Successfully stored company description.");
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("Failed to store information.");
+		}
+
+	}
+
+	public static void displayCompany(List<Company> companyList) {
 		System.out.println("============= Company with keyPeople > 0 =============");
 		for (Company company : companyList) {
-
-			file.write(company.getCompany() + ":" + company.getDescription());
-			if (i++ != companyList.size() - 1) {
-				file.write("\n");
-			}
 			if (company.getKeyPeople().size() > 0) {
 				System.out.println("company : " + company.getCompany());
 			}
 		}
-		file.close();
+	}
 
+	public static void displayFaxInformation(List<Company> companyList) {
 		System.out.println("============= Fax =============");
 		for (Company company : companyList) {
 
@@ -59,12 +96,17 @@ public class JsonToJava {
 
 			}
 		}
-	
+	}
+
+	public static void displayWebUrl(List<Company> companyList) {
+
 		System.out.println("============= webUrl =============");
+
 		for (Company company : companyList) {
 
 			if (company.getWeburl() != null) {
 				Pattern p = Pattern.compile("(www[0-9]?\\.)?(.*)\\.(.*)");
+
 				Matcher m = p.matcher(company.getWeburl());
 				if (m.matches()) {
 					String url = m.group(2) + "." + m.group(3);
@@ -82,10 +124,10 @@ public class JsonToJava {
 				}
 
 			}
+
 		}
-		
 	}
-	
+
 	public static int count(String data) {
 		int charCount = 0;
 		for (int i = 0; i < data.length(); i++) {
@@ -96,4 +138,4 @@ public class JsonToJava {
 		return charCount;
 	}
 
-} 
+}
