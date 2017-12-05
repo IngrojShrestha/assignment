@@ -1,18 +1,18 @@
 
 
-1. Run Main.java in com.employee package to get to get a menu of six options as shown below 
+1.Run Main.java in com.employee package to get to get a menu of six options as shown below 
 
-========== Employee Record Keeping System =========
-0. Exit
-1. Add Employee
-2. Update Employee
-3. Delete Employee
-4. Display all Employee
-5. Search Employee
-Please select the menu (0 - 5) : 
+	========== Employee Record Keeping System =========
+	0.Exit
+	1.Add Employee
+	2.Update Employee
+	3.Delete Employee
+	4.Display all Employee
+	5.Search Employee
+	Please select the menu (0 - 5) : 
 
 
-2. Enter any options from the given menu (0-5) 
+2.Enter any options from the given menu (0-5) 
    
 	2.1 If menu = 0 the user exits from the system 
 
@@ -36,9 +36,9 @@ Please select the menu (0 - 5) :
 
 	    2.3.1 The user needs to enter Employee ID of the employee whose details needs to be updated
 		  
-		If the ID exists, the record is shown, else the Record not found message is shown
+				If the ID exists, the record is shown, else the Record not found message is shown
 
-		After the employee ID has been entered, the employee details is shown and the user can now update the employee details.
+				After the employee ID has been entered, the employee details is shown and the user can now update the employee details.
 		
 	2.4 Else if menu =3 the user can delete records for existing employees 
 	    
@@ -62,18 +62,18 @@ Note:
 
 Executing the Employee Record Keeping System from jar 
 
-1. Run assignment_oop.jar to get menu of six options as shown below:
+1.Run assignment_oop.jar to get menu of six options as shown below:
 	
 $ java -jar assignment_oop.jar
 
-========== Employee Record Keeping System =========
-0. Exit
-1. Add Employee
-2. Update Employee
-3. Delete Employee
-4. Display all Employee
-5. Search Employee
-Please select the menu (0 - 5) : 
+	========== Employee Record Keeping System =========
+	0.Exit
+	1.Add Employee
+	2.Update Employee
+	3.Delete Employee
+	4.Display all Employee
+	5.Search Employee
+	Please select the menu (0 - 5) : 
 
-2. The remaining process is same as (2) above.
+2.The remaining process is same as (2) above.
 	   	
