@@ -36,9 +36,9 @@
 
 	    2.3.1 The user needs to enter Employee ID of the employee whose details needs to be updated
 		  
-				If the ID exists, the record is shown, else the Record not found message is shown
+			If the ID exists, the record is shown, else the Record not found message is shown
 
-				After the employee ID has been entered, the employee details is shown and the user can now update the employee details.
+			After the employee ID has been entered, the employee details is shown and the user can now update the employee details.
 		
 	2.4 Else if menu =3 the user can delete records for existing employees 
 	    
