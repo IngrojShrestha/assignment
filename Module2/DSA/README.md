@@ -18,6 +18,7 @@ Running application
 2. Enter any options from the given menu (1 -9) 
    
 	2.1 If menu = 1 the user is provided with a sorted array list (using merge sort algorithm) of 1000 random integers.
+	    
 	    2.1.1 The user needs to enter number to search.
                   
  			If the integer exists in the array list, record found message is shown. Otherwise, record not found message is shown.
