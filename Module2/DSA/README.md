@@ -220,6 +220,7 @@ Note:
 
 
 Executing the Algorithm from jar 
+
 1.Run assignment_dsa.jar to get menu of six options as shown below:
 
 	Menu
