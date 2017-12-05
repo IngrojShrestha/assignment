@@ -50,7 +50,7 @@
             
 	    If the record(s) does not exist, Record not found message is shown.
 
-	2.6 Else if menu = 4 the user can display records for an existing employees 
+	2.6 Else if menu = 5 the user can display records for an existing employees 
 
 	    2.6.1 The user needs to enter employee ID to search the employee 
 		
