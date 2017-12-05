@@ -222,7 +222,7 @@ Note:
 
 Executing the Algorithm from jar 
 
-1.Run assignment_dsa.jar to get menu of six options as shown below:
+1.Run assignment_dsa.jar to get menu of nine options as shown below:
 
 	Menu
 	1.Binary Search
