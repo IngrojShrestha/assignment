@@ -1,16 +1,16 @@
 Running application
-1. Run Main.java in com.assignment package to get to get a menu of nine options as shown below 
-
+1.Run Main.java in com.assignment package to get to get a menu of nine options as shown below 
+	
 	Menu
-	1. Binary Search
-	2. Quick Sort
-	3. Merge Sort
-	4. Circular Queue
-	5. Double Endede Queue
-	6. Stack
-	7. Double Ended Linked List
-	8. Doubly Ended Linked List
-	9. Binary Search Tree
+	1.Binary Search
+	2.Quick Sort
+	3.Merge Sort
+	4.Circular Queue
+	5.Double Endede Queue
+	6.Stack
+	7.Double Ended Linked List
+	8.Doubly Ended Linked List
+	9.Binary Search Tree
 	Please selection option (1 - 9) :
 
 
@@ -219,19 +219,19 @@ Note:
 
 
 Executing the Algorithm from jar 
-1. Run assignment_dsa.jar to get menu of six options as shown below:
+1.Run assignment_dsa.jar to get menu of six options as shown below:
 
 	Menu
-	1. Binary Search
-	2. Quick Sort
-	3. Merge Sort
-	4. Circular Queue
-	5. Double Endede Queue
-	6. Stack
-	7. Double Ended Linked List
-	8. Doubly Ended Linked List
-	9. Binary Search Tree
+	1.Binary Search
+	2.Quick Sort
+	3.Merge Sort
+	4.Circular Queue
+	5.Double Endede Queue
+	6.Stack
+	7.Double Ended Linked List
+	8.Doubly Ended Linked List
+	9.Binary Search Tree
 	Please selection option (1 - 9) :
 
-2. The remaining process is same as (2) above.
+2.The remaining process is same as (2) above.
 	   	
