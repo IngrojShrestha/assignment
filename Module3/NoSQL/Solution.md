@@ -34,9 +34,9 @@ Performing manual check on each index with hint and execution statistics on abov
 
 5.id
 
-	db.stuff.find({'firstNumber':{'$lt':10000}, 'secondNumber':{'$gt': 5000}}, {'firstNumber':1, 'thirdNumber':1}).sort({'thirdNumber':-1}).hint('id').explain('executionStats')
+	db.stuff.find({'firstNumber':{'$lt':10000}, 'secondNumber':{'$gt': 5000}}, {'firstNumber':1, 'thirdNumber':1}).sort({'thirdNumber':-1}).hint('_id_').explain('executionStats')
 
-*Output: Failed to execute script*
+*Query Execution Time: 88ms*
 
 
 **Answer**
