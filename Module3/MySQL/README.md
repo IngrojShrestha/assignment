@@ -1,6 +1,6 @@
 ## Running Application
 
-1.Export students.csv in mysql database.
+1.Import students.csv to mysql database.
 
 2.Run Main.java in com.assignment package. 
      The user is asked to enter database credentials (database name, username and password) to access the database.
@@ -28,7 +28,7 @@
  
 ## Executing the Algorithm from jar
 
-1.Export students.csv in mysql database.
+1.Import students.csv to mysql database.
 
 2.Run assignment_mysql.jar. The user is asked to enter database credentials (database name, username and password) to access the database.
 
